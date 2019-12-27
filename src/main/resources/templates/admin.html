@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <table border="1" width="70%" align="center">
+       <tr>
+           <th>序号</th>
+           <th>id</th>
+           <th>账号</th>
+           <th>密码</th>
+           <th>邮箱</th>
+           <th>姓名</th>
+       </tr>
+        <tr th:each="admin,vs:${users}">
+            <td th:text="${vs.count}"></td>
+            <td th:text="${admin.id}"></td>
+            <td th:text="${admin.loginacct}"></td>
+            <td th:text="${admin.userpswd}"></td>
+            <td th:text="${admin.email}"></td>
+            <td th:text="${admin.username}"></td>
+        </tr>
+
+   </table>
+</body>
+</html>
